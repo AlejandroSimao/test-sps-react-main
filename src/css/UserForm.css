@@ -1,0 +1,87 @@
+.userform-container {
+  max-width: 480px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.userform-container h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.userform-form label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+  color: #444;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.userform-form input,
+.userform-form select {
+  margin-top: 0.4rem;
+  padding: 0.65rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  transition: border-color 0.2s ease;
+}
+
+.userform-form input:focus,
+.userform-form select:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 8px rgba(79, 70, 229, 0.3);
+}
+
+.userform-form small {
+  font-weight: normal;
+  font-size: 0.8rem;
+  color: #666;
+  margin-left: 0.2rem;
+}
+
+.userform-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn-primary {
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.25s ease;
+}
+
+.btn-primary:hover {
+  background-color: #4338ca;
+}
+
+.btn-secondary {
+  background-color: #bbb;
+  color: #444;
+  border: none;
+  padding: 0.7rem 1.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.25s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #999;
+}
