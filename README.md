@@ -1,6 +1,6 @@
 # 🧑‍💻 User Management Frontend
 
-Este é o frontend de uma aplicação de gerenciamento de usuários desenvolvido em **React**, com autenticação via token JWT e rotas protegidas.
+Este é o frontend de uma aplicação de gerenciamento de usuários desenvolvido em **React**, com autenticação via token JWT, rotas protegidas e uso de bootstrap.
 
 ## 📂 Estrutura de Rotas
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import api from '../services/UserService';
 import { useNavigate } from 'react-router-dom';
-import '../css/Users.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 // Este componente exibe uma lista de usuários e permite ações de gerenciamento de usuários, como adição, edição e exclusão de usuários.
 export default function Users() {
   const [users, setUsers] = useState([]);
@@ -44,30 +44,36 @@ export default function Users() {
   };
 
   return (
-    <div className="users-container">
-      <header className="users-header">
+    <div className="container mt-4">
+      <header className="d-flex justify-content-between align-items-center mb-3">
         <h2> Usuários </h2>{' '}
-        <button className="btn-primary" onClick={() => navigate('/users/new')}>
+        <button
+          className="btn btn-primary"
+          onClick={() => navigate('/users/new')}
+        >
           Cadastrar Novo Usuário{' '}
         </button>{' '}
       </header>{' '}
       {Array.isArray(users) && users.length > 0 ? (
-        <ul className="users-list">
+        <ul className="list-group">
           {' '}
           {users.map((u) => (
-            <li key={u.id} className="user-item">
+            <li
+              key={u.id}
+              className="list-group-item d-flex justify-content-between align-items-center"
+            >
               <div>
                 <strong> {u.name} </strong> — {u.email}{' '}
               </div>{' '}
-              <div className="user-actions">
+              <div>
                 <button
-                  className="btn-secondary"
+                  className="btn btn-sm btn-secondary me-2"
                   onClick={() => navigate(`/users/${u.id}`)}
                 >
                   Editar{' '}
                 </button>{' '}
                 <button
-                  className="btn-danger"
+                  className="btn btn-sm btn-danger"
                   onClick={() => handleDelete(u.id)}
                 >
                   Remover{' '}
@@ -77,7 +83,7 @@ export default function Users() {
           ))}{' '}
         </ul>
       ) : (
-        <p className="no-users"> Nenhum usuário encontrado. </p>
+        <p className="text-muted"> Nenhum usuário encontrado. </p>
       )}{' '}
     </div>
   );
